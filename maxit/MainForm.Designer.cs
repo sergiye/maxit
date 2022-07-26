@@ -1,9 +1,11 @@
-﻿namespace Maxit {
+﻿using System.ComponentModel;
+
+namespace Maxit {
   partial class MainForm {
     /// <summary>
     /// Required designer variable.
     /// </summary>
-    private System.ComponentModel.IContainer components = null;
+    private IContainer components = null;
 
     /// <summary>
     /// Clean up any resources being used.
@@ -13,6 +15,7 @@
       if (disposing && (components != null)) {
         components.Dispose();
       }
+
       base.Dispose(disposing);
     }
 
@@ -23,130 +26,138 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
-      this.panScore = new System.Windows.Forms.Panel();
-      this.lblScore2 = new System.Windows.Forms.Label();
-      this.lblScore1 = new System.Windows.Forms.Label();
-      this.btnStart = new System.Windows.Forms.Button();
-      this.tabControl1 = new System.Windows.Forms.TabControl();
-      this.tabPage1 = new System.Windows.Forms.TabPage();
-      this.panField = new System.Windows.Forms.Panel();
-      this.tabPage2 = new System.Windows.Forms.TabPage();
-      this.panScore.SuspendLayout();
-      this.tabControl1.SuspendLayout();
-      this.tabPage1.SuspendLayout();
+      this.gameBoard = new System.Windows.Forms.PictureBox();
+      this.panelControls = new System.Windows.Forms.Panel();
+      this.btnRestart = new System.Windows.Forms.Button();
+      this.lblCurrentMove = new System.Windows.Forms.Label();
+      this.lblPlayer2Score = new System.Windows.Forms.Label();
+      this.lblPlayer1Score = new System.Windows.Forms.Label();
+      this.lblPlayer2 = new System.Windows.Forms.Label();
+      this.lblPlayer1 = new System.Windows.Forms.Label();
+      ((System.ComponentModel.ISupportInitialize)(this.gameBoard)).BeginInit();
+      this.panelControls.SuspendLayout();
       this.SuspendLayout();
       // 
-      // panScore
+      // gameBoard
       // 
-      this.panScore.Controls.Add(this.lblScore2);
-      this.panScore.Controls.Add(this.lblScore1);
-      this.panScore.Controls.Add(this.btnStart);
-      this.panScore.Dock = System.Windows.Forms.DockStyle.Top;
-      this.panScore.Location = new System.Drawing.Point(3, 3);
-      this.panScore.Name = "panScore";
-      this.panScore.Size = new System.Drawing.Size(278, 35);
-      this.panScore.TabIndex = 0;
+      this.gameBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.gameBoard.Location = new System.Drawing.Point(0, 115);
+      this.gameBoard.Name = "gameBoard";
+      this.gameBoard.Size = new System.Drawing.Size(584, 546);
+      this.gameBoard.TabIndex = 0;
+      this.gameBoard.TabStop = false;
       // 
-      // lblScore2
+      // panelControls
       // 
-      this.lblScore2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.lblScore2.AutoSize = true;
-      this.lblScore2.Location = new System.Drawing.Point(203, 12);
-      this.lblScore2.Name = "lblScore2";
-      this.lblScore2.Size = new System.Drawing.Size(48, 13);
-      this.lblScore2.TabIndex = 2;
-      this.lblScore2.Text = "Player 2:";
+      this.panelControls.BackColor = System.Drawing.Color.MidnightBlue;
+      this.panelControls.Controls.Add(this.btnRestart);
+      this.panelControls.Controls.Add(this.lblCurrentMove);
+      this.panelControls.Controls.Add(this.lblPlayer2Score);
+      this.panelControls.Controls.Add(this.lblPlayer1Score);
+      this.panelControls.Controls.Add(this.lblPlayer2);
+      this.panelControls.Controls.Add(this.lblPlayer1);
+      this.panelControls.Dock = System.Windows.Forms.DockStyle.Top;
+      this.panelControls.Location = new System.Drawing.Point(0, 0);
+      this.panelControls.Name = "panelControls";
+      this.panelControls.Size = new System.Drawing.Size(584, 115);
+      this.panelControls.TabIndex = 1;
       // 
-      // lblScore1
+      // btnRestart
       // 
-      this.lblScore1.AutoSize = true;
-      this.lblScore1.Location = new System.Drawing.Point(5, 12);
-      this.lblScore1.Name = "lblScore1";
-      this.lblScore1.Size = new System.Drawing.Size(48, 13);
-      this.lblScore1.TabIndex = 1;
-      this.lblScore1.Text = "Player 1:";
+      this.btnRestart.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.btnRestart.ForeColor = System.Drawing.Color.LimeGreen;
+      this.btnRestart.Location = new System.Drawing.Point(253, 67);
+      this.btnRestart.Name = "btnRestart";
+      this.btnRestart.Size = new System.Drawing.Size(94, 42);
+      this.btnRestart.TabIndex = 5;
+      this.btnRestart.Text = "Restart";
+      this.btnRestart.UseVisualStyleBackColor = false;
+      this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
       // 
-      // btnStart
+      // lblCurrentMove
       // 
-      this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
-      this.btnStart.Location = new System.Drawing.Point(102, 7);
-      this.btnStart.Name = "btnStart";
-      this.btnStart.Size = new System.Drawing.Size(75, 23);
-      this.btnStart.TabIndex = 0;
-      this.btnStart.Text = "Start";
-      this.btnStart.UseVisualStyleBackColor = true;
-      this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+      this.lblCurrentMove.AutoSize = true;
+      this.lblCurrentMove.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.lblCurrentMove.ForeColor = System.Drawing.Color.Crimson;
+      this.lblCurrentMove.Location = new System.Drawing.Point(255, -15);
+      this.lblCurrentMove.Name = "lblCurrentMove";
+      this.lblCurrentMove.Size = new System.Drawing.Size(83, 84);
+      this.lblCurrentMove.TabIndex = 4;
+      this.lblCurrentMove.Text = "←";
+      this.lblCurrentMove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       // 
-      // tabControl1
+      // lblPlayer2Score
       // 
-      this.tabControl1.Controls.Add(this.tabPage1);
-      this.tabControl1.Controls.Add(this.tabPage2);
-      this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.tabControl1.Location = new System.Drawing.Point(0, 0);
-      this.tabControl1.Name = "tabControl1";
-      this.tabControl1.SelectedIndex = 0;
-      this.tabControl1.Size = new System.Drawing.Size(292, 306);
-      this.tabControl1.TabIndex = 1;
+      this.lblPlayer2Score.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.lblPlayer2Score.ForeColor = System.Drawing.Color.Yellow;
+      this.lblPlayer2Score.Location = new System.Drawing.Point(475, 59);
+      this.lblPlayer2Score.Name = "lblPlayer2Score";
+      this.lblPlayer2Score.Size = new System.Drawing.Size(97, 50);
+      this.lblPlayer2Score.TabIndex = 3;
+      this.lblPlayer2Score.Text = "0";
+      this.lblPlayer2Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       // 
-      // tabPage1
+      // lblPlayer1Score
       // 
-      this.tabPage1.Controls.Add(this.panField);
-      this.tabPage1.Controls.Add(this.panScore);
-      this.tabPage1.Location = new System.Drawing.Point(4, 22);
-      this.tabPage1.Name = "tabPage1";
-      this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPage1.Size = new System.Drawing.Size(284, 280);
-      this.tabPage1.TabIndex = 0;
-      this.tabPage1.Text = "Game";
-      this.tabPage1.UseVisualStyleBackColor = true;
+      this.lblPlayer1Score.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.lblPlayer1Score.ForeColor = System.Drawing.Color.Yellow;
+      this.lblPlayer1Score.Location = new System.Drawing.Point(12, 59);
+      this.lblPlayer1Score.Name = "lblPlayer1Score";
+      this.lblPlayer1Score.Size = new System.Drawing.Size(97, 50);
+      this.lblPlayer1Score.TabIndex = 2;
+      this.lblPlayer1Score.Text = "0";
+      this.lblPlayer1Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       // 
-      // panField
+      // lblPlayer2
       // 
-      this.panField.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panField.Location = new System.Drawing.Point(3, 38);
-      this.panField.Name = "panField";
-      this.panField.Size = new System.Drawing.Size(278, 239);
-      this.panField.TabIndex = 1;
+      this.lblPlayer2.AutoSize = true;
+      this.lblPlayer2.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.lblPlayer2.ForeColor = System.Drawing.Color.Gold;
+      this.lblPlayer2.Location = new System.Drawing.Point(475, 21);
+      this.lblPlayer2.Name = "lblPlayer2";
+      this.lblPlayer2.Size = new System.Drawing.Size(97, 33);
+      this.lblPlayer2.TabIndex = 1;
+      this.lblPlayer2.Text = "Player 2";
       // 
-      // tabPage2
+      // lblPlayer1
       // 
-      this.tabPage2.Location = new System.Drawing.Point(4, 22);
-      this.tabPage2.Name = "tabPage2";
-      this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPage2.Size = new System.Drawing.Size(284, 280);
-      this.tabPage2.TabIndex = 1;
-      this.tabPage2.Text = "Options";
-      this.tabPage2.UseVisualStyleBackColor = true;
+      this.lblPlayer1.AutoSize = true;
+      this.lblPlayer1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.lblPlayer1.ForeColor = System.Drawing.Color.Gold;
+      this.lblPlayer1.Location = new System.Drawing.Point(12, 21);
+      this.lblPlayer1.Name = "lblPlayer1";
+      this.lblPlayer1.Size = new System.Drawing.Size(97, 33);
+      this.lblPlayer1.TabIndex = 0;
+      this.lblPlayer1.Text = "Player 1";
       // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(292, 306);
-      this.Controls.Add(this.tabControl1);
-      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-      this.MaximizeBox = false;
+      this.ClientSize = new System.Drawing.Size(584, 661);
+      this.Controls.Add(this.gameBoard);
+      this.Controls.Add(this.panelControls);
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+      this.MinimizeBox = false;
       this.Name = "MainForm";
-      this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Maxit";
-      this.panScore.ResumeLayout(false);
-      this.panScore.PerformLayout();
-      this.tabControl1.ResumeLayout(false);
-      this.tabPage1.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.gameBoard)).EndInit();
+      this.panelControls.ResumeLayout(false);
+      this.panelControls.PerformLayout();
       this.ResumeLayout(false);
 
     }
 
+    private System.Windows.Forms.PictureBox gameBoard;
+    private System.Windows.Forms.Panel panelControls;
+
     #endregion
 
-    private System.Windows.Forms.Panel panScore;
-    private System.Windows.Forms.TabControl tabControl1;
-    private System.Windows.Forms.TabPage tabPage1;
-    private System.Windows.Forms.Panel panField;
-    private System.Windows.Forms.TabPage tabPage2;
-    private System.Windows.Forms.Button btnStart;
-    private System.Windows.Forms.Label lblScore2;
-    private System.Windows.Forms.Label lblScore1;
+    private System.Windows.Forms.Label lblPlayer2Score;
+    private System.Windows.Forms.Label lblPlayer1Score;
+    private System.Windows.Forms.Label lblPlayer2;
+    private System.Windows.Forms.Label lblPlayer1;
+    private System.Windows.Forms.Label lblCurrentMove;
+    private System.Windows.Forms.Button btnRestart;
   }
 }
-
