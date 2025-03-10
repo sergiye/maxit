@@ -26,13 +26,3 @@ Maxit - simple numbers game (for windows)
 <a href="LICENSE">GPL-3.0 License</a> 
 
 Copyright © 2022 Sergiy Egoshyn
-
-## Donate
-
-<a href=https://www.buymeacoffee.com/sergiye>
-<img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" />
-</a>
-
-**If you like the program, you can support the author and transfer money to**
-- PrivatBank card number: 5169 3600 1644 3834
-- IBAN number: UA113052990000026208909644481

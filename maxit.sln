@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maxit", "maxit\Maxit.csproj", "{E40509CA-D788-44A1-8E13-398F6C1E7A44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxitOld", "maxitOld\MaxitOld.csproj", "{7EC2DA20-66E3-4EC9-9F3D-570D5A30F211}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,10 @@ Global
 		{E40509CA-D788-44A1-8E13-398F6C1E7A44}.Debug|x86.Build.0 = Debug|x86
 		{E40509CA-D788-44A1-8E13-398F6C1E7A44}.Release|x86.ActiveCfg = Release|x86
 		{E40509CA-D788-44A1-8E13-398F6C1E7A44}.Release|x86.Build.0 = Release|x86
+		{7EC2DA20-66E3-4EC9-9F3D-570D5A30F211}.Debug|x86.ActiveCfg = Debug|x86
+		{7EC2DA20-66E3-4EC9-9F3D-570D5A30F211}.Debug|x86.Build.0 = Debug|x86
+		{7EC2DA20-66E3-4EC9-9F3D-570D5A30F211}.Release|x86.ActiveCfg = Release|x86
+		{7EC2DA20-66E3-4EC9-9F3D-570D5A30F211}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
